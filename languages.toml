@@ -10,9 +10,7 @@ language-servers = ["rust-analyzer"]
 # toml
 [[language]]
 name = "toml"
-language-servers = [
-  "taplo"
-]
+language-servers = ["taplo"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
 # typst

@@ -21,8 +21,11 @@ shell = ["nu", "--stdin", "-c"]
 # enable = true
 # trigger-length = 4
 
-# [editor.inline-blame]
-# show = "cursor-line"
+# [editor.version-control]
+# inline-blame = true
+
+[editor.inline-blame]
+show = "cursor-line"
 
 [editor.statusline]
 # center = ["file-modification-indicator", "file-name"]
@@ -60,7 +63,7 @@ right = [
   "spacer",
 ]
 diagnostics = ["info", "warning", "error"]
-separator = "│"
+# separator = "│"
 
 [editor.statusline.mode]
 insert = "INSERT"
@@ -100,12 +103,61 @@ after-delay.enable = true
 
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "╎"        # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 rainbow-indent = "dim"
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+[icons.vcs]
+enabled = true
+icon = "⌬"
+
+[icons.kind]
+enabled = true
+number = ""
+string = ""
+function = "󰊕"
+color = "󰌁"
+
+[icons.fs]
+enabled = true
+php = { glyph = "", color = "#1976D2" }
+godot = { glyph = "", color = "#2196F3" }
+gd = { glyph = "", color = "#2196F3" }
+gdshader = { glyph = "󰘷", color = "#9C27B0" }
+wgsl = { glyph = "", color = "#E06C75" }
+wesl = { glyph = "", color = "#E06C75" }
+cj = ""
+yml = ""
+yaml = ""
+conf = ""
+kdl = ""
+Makefile = ""
+ron = "󰔘"
+db = ""
+sql = "󰆼"
+jsonc = ""
+json5 = ""
+"ignore" = "󰈉"
+".ignore" = "󰈉"
+"lrc" = "󰨖"
+"env" = ""
+"hurl" = { glyph = "", color = "#DE3163" }
+directory = "🖿"
+
+[icons.ui.statusline]
+separator = "⸽"
+
+[icons.diagnostic]
+error = " "
+warning = " "
+info = ""
+hint = "󰮥 "
+
+[icons.ui.virtual]
+ruler = "|"
 
 [keys.normal]
 "A-down" = [
