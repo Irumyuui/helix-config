@@ -1,0 +1,103 @@
+# theme = "doom_acario_dark" # "papercolor-dark"
+# theme = "papercolor-dark"
+# theme = "tokyonight_storm"
+# theme = "base16_transparent"
+theme = "catppuccin_frappe_translate"
+
+[editor]
+auto-format = false
+bufferline = "multiple"
+color-modes = true
+cursorcolumn = true
+cursorline = true
+idle-timeout = 0
+line-number = "relative"
+mouse = true
+true-color = true
+end-of-line-diagnostics = "hint"
+shell = ["nu", "--stdin", "-c"]
+insert-final-newline = true
+
+[editor.statusline]
+center = [
+  "file-modification-indicator",
+  "file-name",
+]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "read-only-indicator",
+]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "total-line-numbers",
+  "file-encoding",
+  "file-indent-style",
+  "file-line-ending",
+  "file-type",
+]
+separator = "⸽"
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
+
+[editor.lsp]
+auto-signature-help = true
+display-inlay-hints = true
+display-messages = true
+display-signature-help-docs = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+nbsp = "␣" 
+newline = "⏎" 
+space = "·" 
+tab = "⇥" 
+tabpad = "-" # Tabs will look like "→···" (depending on tab width)
+
+# [editor.indent-guides]
+# character = "║" # Some characters that work well: "▏", "╎", "┆", "┊", "⸽"
+# render = true 
+# skip-levels = 1 
+
+[editor.soft-wrap]
+enable = true
+
+[editor.auto-save]
+after-delay.enable = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+[keys.normal]
+"A-down" = ["extend_line_below", "delete_selection", "paste_after", "collapse_selection"]
+"A-j" = ["extend_line_below", "delete_selection", "paste_after", "collapse_selection"]
+"A-k" = ["extend_line_below", "delete_selection", "move_visual_line_up", "paste_before", "collapse_selection"]
+"A-up" = ["extend_line_below", "delete_selection", "move_visual_line_up", "paste_before", "collapse_selection"]
+G = "goto_last_line"
+C-s = ":write"
+# y = ":clipboard-yank"
+# p = "paste_clipboard_after"
+# P = "paste_clipboard_before"
+# "\\" = "shell_pipe"
+# X = ["selections", "trim_selections"]
+
+[keys.normal.space]
+"x" = ":buffer-close"

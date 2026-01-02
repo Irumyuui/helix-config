@@ -1,0 +1,4 @@
+inherits = "base16_transparent"
+
+# [ui]
+# linenr = "#E0E0E0"
