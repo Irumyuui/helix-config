@@ -1,0 +1,33 @@
+# rust
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+
+# toml
+[[language]]
+name = "toml"
+language-servers = [
+  "taplo"
+]
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+# typst
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+formatter = { command = "typst", args = ["c"] }
+# text-width = 80
+soft-wrap = { enable = true, wrap-at-text-width = true }
+
+# --- steel -----
+[language-server.steel]
+command = "steel-language-server"
+
+[[language]]
+name = "scheme"
+shebangs = ["scheme", "guile", "chicken", "steel"]
+language-servers = ["steel"]

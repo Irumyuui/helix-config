@@ -1,11 +1,9 @@
-# theme = "doom_acario_dark" # "papercolor-dark"
-# theme = "papercolor-dark"
-# theme = "tokyonight_storm"
-# theme = "base16_transparent"
 theme = "catppuccin_frappe_translate"
 
 [editor]
 auto-format = false
+# auto-reload = true
+auto-info = true
 bufferline = "multiple"
 color-modes = true
 cursorcolumn = true
@@ -15,36 +13,63 @@ line-number = "relative"
 mouse = true
 true-color = true
 end-of-line-diagnostics = "hint"
-shell = ["nu", "--stdin", "-c"]
 insert-final-newline = true
+# rainbow-brackets = true
+shell = ["nu", "--stdin", "-c"]
+
+# [editor.word-completion]
+# enable = true
+# trigger-length = 4
+
+# [editor.inline-blame]
+# show = "cursor-line"
 
 [editor.statusline]
-center = [
-  "file-modification-indicator",
-  "file-name",
-]
+# center = ["file-modification-indicator", "file-name"]
+# left = ["mode", "spinner", "version-control", "read-only-indicator"]
+# right = [
+#   "diagnostics",
+#   "selections",
+#   "position",
+#   "total-line-numbers",
+#   "file-encoding",
+#   "file-indent-style",
+#   "file-line-ending",
+#   "file-type",
+# ]
+# separator = "⸽"
 left = [
   "mode",
   "spinner",
   "version-control",
   "read-only-indicator",
+  "file-name",
+  "file-modification-indicator",
 ]
+center = ["diagnostics"]
 right = [
-  "diagnostics",
-  "selections",
+  "register",
   "position",
-  "total-line-numbers",
+  "primary-selection-length",
+  "selections",
   "file-encoding",
   "file-indent-style",
   "file-line-ending",
+  "position-percentage",
   "file-type",
+  "spacer",
 ]
-separator = "⸽"
+diagnostics = ["info", "warning", "error"]
+separator = "│"
 
 [editor.statusline.mode]
 insert = "INSERT"
 normal = "NORMAL"
 select = "SELECT"
+
+# [editor.explorer]
+# position = "center"
+# column-width = 22
 
 [editor.lsp]
 auto-signature-help = true
@@ -61,16 +86,11 @@ select = "underline"
 render = "all"
 
 [editor.whitespace.characters]
-nbsp = "␣" 
-newline = "⏎" 
-space = "·" 
-tab = "⇥" 
-tabpad = "-" # Tabs will look like "→···" (depending on tab width)
-
-# [editor.indent-guides]
-# character = "║" # Some characters that work well: "▏", "╎", "┆", "┊", "⸽"
-# render = true 
-# skip-levels = 1 
+nbsp = "␣"
+newline = "⏎"
+space = "·"
+tab = "⇥"
+tabpad = "-"  # Tabs will look like "→···" (depending on tab width)
 
 [editor.soft-wrap]
 enable = true
@@ -82,22 +102,62 @@ after-delay.enable = true
 render = true
 character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
+rainbow-indent = "dim"
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
 
 [keys.normal]
-"A-down" = ["extend_line_below", "delete_selection", "paste_after", "collapse_selection"]
-"A-j" = ["extend_line_below", "delete_selection", "paste_after", "collapse_selection"]
-"A-k" = ["extend_line_below", "delete_selection", "move_visual_line_up", "paste_before", "collapse_selection"]
-"A-up" = ["extend_line_below", "delete_selection", "move_visual_line_up", "paste_before", "collapse_selection"]
-G = "goto_last_line"
+"A-down" = [
+  "extend_line_below",
+  "delete_selection",
+  "paste_after",
+  "collapse_selection",
+]
+"A-j" = [
+  "extend_line_below",
+  "delete_selection",
+  "paste_after",
+  "collapse_selection",
+]
+"A-k" = [
+  "extend_line_below",
+  "delete_selection",
+  "move_visual_line_up",
+  "paste_before",
+  "collapse_selection",
+]
+"A-up" = [
+  "extend_line_below",
+  "delete_selection",
+  "move_visual_line_up",
+  "paste_before",
+  "collapse_selection",
+]
+
+# G = "goto_last_line"
 C-s = ":write"
-# y = ":clipboard-yank"
-# p = "paste_clipboard_after"
-# P = "paste_clipboard_before"
-# "\\" = "shell_pipe"
-# X = ["selections", "trim_selections"]
+
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+
+"\\" = ":reflow"        # |
+X = "extend_line_above"
+
+# [keys.normal.z]
+# o = [":toggle soft-wrap.wrap-at-text-width"]
 
 [keys.normal.space]
-"x" = ":buffer-close"
+x = ":buffer-close"
+n = "signature_help"
+
+[keys.normal.space.w]
+r = ":reload"
+c = ":config-reload"
+
+[keys.insert]
+S-tab = "move_parent_node_start"
+
+[keys.select]
+tab = "extend_parent_node_end"
+S-tab = "extend_parent_node_start"
