@@ -1,0 +1,40 @@
+# only windows
+# but not used
+
+[keys.normal]
+"esc" = [
+  "normal_mode",
+  ":pipe-to ime current-lang | save --force ($env.TEMP | path join ime-lang-context.rec); ime switch-lang --lang en",
+]
+i = [
+  "insert_mode",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+I = [
+  "insert_at_line_start",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+a = [
+  "move_char_right",
+  "insert_mode",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+A = [
+  "insert_at_line_end",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+o = [
+  "open_below",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+O = [
+  "open_above",
+  ":pipe-to let ime_rec_path = $env.TEMP | path join ime-lang-context.rec; if ($ime_rec_path | path exists) { ime switch-lang --lang (cat $ime_rec_path); rm $ime_rec_path }",
+]
+
+
+[keys.insert]
+"esc" = [
+  "normal_mode",
+  ":pipe-to ime current-lang | save --force ($env.TEMP | path join ime-lang-context.rec); ime switch-lang --lang en",
+ ]
