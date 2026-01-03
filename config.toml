@@ -3,7 +3,7 @@ theme = "catppuccin_frappe_translate"
 [editor]
 auto-format = false
 # auto-reload = true
-auto-info = true
+# auto-info = true
 bufferline = "multiple"
 color-modes = true
 cursorcolumn = true
@@ -24,8 +24,8 @@ shell = ["nu", "--stdin", "-c"]
 # [editor.version-control]
 # inline-blame = true
 
-[editor.inline-blame]
-show = "cursor-line"
+# [editor.inline-blame]
+# show = "cursor-line"
 
 [editor.statusline]
 # center = ["file-modification-indicator", "file-name"]
@@ -105,7 +105,7 @@ after-delay.enable = true
 render = true
 character = "╎"        # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
-rainbow-indent = "dim"
+# rainbow-indent = "dim"
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
