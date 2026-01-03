@@ -16,6 +16,7 @@ end-of-line-diagnostics = "hint"
 insert-final-newline = true
 # rainbow-brackets = true
 shell = ["nu", "--stdin", "-c"]
+default-line-ending = "native"
 
 # [editor.word-completion]
 # enable = true
