@@ -21,7 +21,7 @@ formatter = { command = "typst", args = ["c"] }
 # text-width = 80
 soft-wrap = { enable = true, wrap-at-text-width = true }
 
-# --- steel -----
+# steel
 [language-server.steel]
 command = "steel-language-server"
 
@@ -29,3 +29,7 @@ command = "steel-language-server"
 name = "scheme"
 shebangs = ["scheme", "guile", "chicken", "steel"]
 language-servers = ["steel"]
+
+[[language]]
+name = "nu"
+formatter = { command = "nufmt", args = ["--stdin"] }
