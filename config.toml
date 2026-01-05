@@ -50,7 +50,7 @@ left = [
   "file-name",
   "file-modification-indicator",
 ]
-center = ["diagnostics"]
+center = ["diagnostics", "workspace-diagnostics"]
 right = [
   "register",
   "position",
@@ -63,7 +63,8 @@ right = [
   "file-type",
   "spacer",
 ]
-diagnostics = ["info", "warning", "error"]
+diagnostics = ["hint", "info", "warning", "error"]
+workspace-diagnostics = ["hint", "info", "warning", "error"]
 # separator = "│"
 
 [editor.statusline.mode]
@@ -104,7 +105,7 @@ after-delay.enable = true
 
 [editor.indent-guides]
 render = true
-character = "╎"        # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 # rainbow-indent = "dim"
 
@@ -152,10 +153,10 @@ directory = "🖿"
 separator = "⸽"
 
 [icons.diagnostic]
-error = " "
-warning = " "
-info = ""
-hint = "󰮥 "
+error = '!'
+warning = '▲'
+info = '●'
+hint = '○'
 
 [icons.ui.virtual]
 ruler = "|"
