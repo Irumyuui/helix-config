@@ -1,7 +1,8 @@
 # rust
-
 [language-server.rust-analyzer.config]
 check.command = "clippy"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.closureReturnTypeHints.enable = "with_block"
 
 [[language]]
 name = "rust"
