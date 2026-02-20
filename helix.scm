@@ -4,7 +4,9 @@
 (require "helix/editor.scm")
 (require "helix/misc.scm")
 
-(provide helix-scm-open init-scm-open)
+(provide helix-scm-open
+         init-scm-open
+         rust-lsp-add)
 
 ;;@doc
 ;; Open the helix.scm file
@@ -16,3 +18,7 @@
 (define (init-scm-open)
   (helix.open (helix.static.get-init-scm-path)))
 
+;;@doc
+;; Add rust-lsp
+(define (rust-lsp-add)
+    (helix.pipe-to "rustup component add rust-analyzer"))
