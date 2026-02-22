@@ -200,8 +200,8 @@ S-tab = "move_parent_node_start"
 X = "extend_line_above"
 
 # use ctrl+/ to toggle comments
-C-c = "no_op"
-"C-/" = "toggle_comments"
+# C-c = "no_op"
+# "C-/" = "toggle_comments"
 
 # [keys.normal.z]
 # o = [":toggle soft-wrap.wrap-at-text-width"]
@@ -223,14 +223,13 @@ o = ":toggle inline-diagnostics.other-lines error disable"
 S-tab = "move_parent_node_start"
 
 # use ctrl+/ to toggle comments
-C-c = "no_op"
-"C-/" = "toggle_comments"
+# C-c = "no_op"
+# "C-/" = "toggle_comments"
 
 [keys.select]
 tab = "extend_parent_node_end"
 S-tab = "extend_parent_node_start"
 
 # use ctrl+/ to toggle comments
-C-c = "no_op"
-"C-/" = "toggle_comments"
-
+# C-c = "no_op"
+# "C-/" = "toggle_comments"
