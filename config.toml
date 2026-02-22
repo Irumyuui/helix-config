@@ -30,19 +30,6 @@ default-line-ending = "native"
 # show = "cursor-line"
 
 [editor.statusline]
-# center = ["file-modification-indicator", "file-name"]
-# left = ["mode", "spinner", "version-control", "read-only-indicator"]
-# right = [
-#   "diagnostics",
-#   "selections",
-#   "position",
-#   "total-line-numbers",
-#   "file-encoding",
-#   "file-indent-style",
-#   "file-line-ending",
-#   "file-type",
-# ]
-# separator = "⸽"
 left = [
   "mode",
   "spinner",
