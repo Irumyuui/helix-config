@@ -1,4 +1,5 @@
-theme = "catppuccin_frappe_translate"
+# theme = "catppuccin_frappe_translate"
+theme = "catppuccin_latte"
 
 [editor]
 auto-format = false
